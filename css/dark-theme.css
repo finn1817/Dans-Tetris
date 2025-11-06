@@ -1,0 +1,31 @@
+/* Dark mode variable overrides */
+
+body.dark-mode {
+	--primary-color: #6ab0ff;
+	--primary-dark: #3b82f6;
+	--secondary-color: #1f2937;
+	--text-color: #f9fafb;
+	--background-color: #0f172a;
+	--card-bg: #1e293b;
+	--border-color: #334155;
+	--shadow-color: rgba(15, 23, 42, 0.6);
+	--grid-bg: #0b1120;
+	--grid-border: #1f2937;
+	--ghost-color: rgba(255, 255, 255, 0.25);
+
+	--color-i: #5fd0d0;
+	--color-j: #6c7dff;
+	--color-l: #ffb347;
+	--color-o: #ffdd57;
+	--color-s: #7cd992;
+	--color-t: #c084fc;
+	--color-z: #f47272;
+}
+
+body.dark-mode .scores-list::-webkit-scrollbar-thumb {
+	background-color: rgba(148, 163, 184, 0.6);
+}
+
+body.dark-mode .key {
+	border-color: rgba(255, 255, 255, 0.15);
+}

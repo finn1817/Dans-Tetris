@@ -1,13 +1,13 @@
 import { SETTINGS, createEmptyBoard } from './page-settings.js';
-import { TetrominoGenerator, cloneShape, rotateClockwise } from './blocks.js';
-import { GameScreen } from './game-screen.js';
-import { NextPiecePreview } from './next-piece.js';
-import { GameStats } from './game-stats.js';
-import { ScoreHistory } from './previous-scores.js';
-import { calculateHardDropDistance, applyHardDrop } from './hard-drop.js';
-import { setupKeyboardControls, setupButtonControls, updatePauseButtonVisuals } from './controls-&-motion.js';
-import { renderInstructions } from './how-to-play-panel.js';
-import { initializeThemeToggle } from './page-styles.js';
+import { TetrominoGenerator, cloneShape, rotateClockwise } from './blocks.js?v=20251106';
+import { GameScreen } from './game-screen.js?v=20251106';
+import { NextPiecePreview } from './next-piece.js?v=20251106';
+import { GameStats } from './game-stats.js?v=20251106';
+import { ScoreHistory } from './previous-scores.js?v=20251106';
+import { calculateHardDropDistance, applyHardDrop } from './hard-drop.js?v=20251106';
+import { setupKeyboardControls, setupButtonControls, updatePauseButtonVisuals } from './controls-&-motion.js?v=20251106';
+import { renderInstructions } from './how-to-play-panel.js?v=20251106';
+import { initializeThemeToggle } from './page-styles.js?v=20251106';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const dom = queryDom();

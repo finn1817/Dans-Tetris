@@ -5,7 +5,7 @@ const INSTRUCTIONS = [
 	{ keys: ['→'], description: 'Move right' },
 	{ keys: ['↓'], description: 'Soft drop' },
 	{ keys: ['↑'], description: 'Rotate clockwise' },
-	{ keys: ['Space'], description: 'Hard drop instantly' },
+	{ keys: ['Q'], description: 'Hard drop instantly' },
 	{ keys: ['P'], description: 'Pause or resume' },
 	{ keys: ['R'], description: 'Restart current game' }
 ];

@@ -5,11 +5,15 @@ const KEY_BINDINGS = new Map([
 	['ArrowRight', 'right'],
 	['ArrowDown', 'down'],
 	['ArrowUp', 'rotate'],
-	['Space', 'drop'],
-	[' ', 'drop'],
-	['Spacebar', 'drop'],
+	['KeyQ', 'drop'],
+	['q', 'drop'],
+	['Q', 'drop'],
 	['KeyP', 'pause'],
-	['KeyR', 'restart']
+	['p', 'pause'],
+	['P', 'pause'],
+	['KeyR', 'restart'],
+	['r', 'restart'],
+	['R', 'restart']
 ]);
 
 export function setupKeyboardControls(callbacks) {

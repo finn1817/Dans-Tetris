@@ -4,6 +4,7 @@ import { GameScreen } from './game-screen.js';
 import { NextPiecePreview } from './next-piece.js';
 import { GameStats } from './game-stats.js';
 import { ScoreHistory } from './previous-scores.js';
+import { calculateHardDropDistance, applyHardDrop } from './hard-drop.js';
 import { setupKeyboardControls, setupButtonControls, updatePauseButtonVisuals } from './controls-&-motion.js';
 import { renderInstructions } from './how-to-play-panel.js';
 import { initializeThemeToggle } from './page-styles.js';
@@ -172,13 +173,11 @@ class TetrisGame {
 			return;
 		}
 
-		let distance = 0;
-		while (this.isValidMove(this.activePiece, 0, distance + 1)) {
-			distance += 1;
-		}
+		const piece = this.activePiece;
+		const distance = calculateHardDropDistance(piece, offset => this.isValidMove(piece, 0, offset));
 
 		if (distance > 0) {
-			this.activePiece.pos.y += distance;
+			applyHardDrop(piece, distance);
 			this.stats.addHardDropBonus(distance);
 		}
 

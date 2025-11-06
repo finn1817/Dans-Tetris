@@ -1,13 +1,12 @@
 // Handles user input bindings for keyboard and buttons.
 
+import { isHardDropKey } from './hard-drop.js';
+
 const KEY_BINDINGS = new Map([
 	['ArrowLeft', 'left'],
 	['ArrowRight', 'right'],
 	['ArrowDown', 'down'],
 	['ArrowUp', 'rotate'],
-	['KeyQ', 'drop'],
-	['q', 'drop'],
-	['Q', 'drop'],
 	['KeyP', 'pause'],
 	['p', 'pause'],
 	['P', 'pause'],
@@ -18,6 +17,12 @@ const KEY_BINDINGS = new Map([
 
 export function setupKeyboardControls(callbacks) {
 	const handler = event => {
+		if (isHardDropKey(event)) {
+			event.preventDefault();
+			callbacks.onHardDrop?.();
+			return;
+		}
+
 		const action = KEY_BINDINGS.get(event.code) ?? KEY_BINDINGS.get(event.key);
 		if (!action) {
 			return;

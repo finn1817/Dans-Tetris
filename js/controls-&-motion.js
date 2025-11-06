@@ -5,6 +5,7 @@ const KEY_BINDINGS = new Map([
 	['ArrowRight', 'right'],
 	['ArrowDown', 'down'],
 	['ArrowUp', 'rotate'],
+	['Space', 'drop'],
 	[' ', 'drop'],
 	['Spacebar', 'drop'],
 	['KeyP', 'pause'],
@@ -13,7 +14,7 @@ const KEY_BINDINGS = new Map([
 
 export function setupKeyboardControls(callbacks) {
 	const handler = event => {
-		const action = KEY_BINDINGS.get(event.code);
+		const action = KEY_BINDINGS.get(event.code) ?? KEY_BINDINGS.get(event.key);
 		if (!action) {
 			return;
 		}
